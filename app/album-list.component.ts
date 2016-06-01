@@ -26,6 +26,7 @@ import {DonePipe} from './done.pipe';
   </album-display>
   <edit-album-details *ngIf="selectedAlbum" [album]="selectedAlbum">
   </edit-album-details>
+
   <new-album (onSubmitNewAlbum)="createAlbum($event)"></new-album>
   `
 })
@@ -49,14 +50,14 @@ export class AlbumListComponent {
   );
   }
 // new code block for including additional parameters, not complete. we need this to send information to each album component.
-  createcompleteAlbum(name: string, artist: string, price: number, genre: string): void {
-  this.currentAlbum.push(
-    new Album(name, this.albumList.length),
-    new Album(artist, this.albumList.length),
-    new Album(price, this.albumList.length),
-    new Album(genre, this.albumList.length)
-  );
-  }
+  // createcompleteAlbum(name: string, artist: string, price: number, genre: string): void {
+  // this.currentAlbum.push(
+  //   new Album(name, this.albumList.length)
+  //   new Album(artist, this.albumList.length),
+  //   new Album(price, this.albumList.length),
+  //   new Album(genre, this.albumList.length)
+  // );
+  // }
   // end code block
   onChange(filterOption) {
     this.filterDone = filterOption;

@@ -8,10 +8,7 @@ import {Album} from './album.model';
   <div class="album-form">
     <h3>Create Album:</h3>
     <input placeholder="Name" class="col-lg-8 input-lg" #newName>
-    <input placeholder="Artist" class="col-lg-8 input-lg" #newArtist>
-    <input placeholder="Price" class="col-lg-8 input-lg" #newPrice>
-    <input placeholder="Genre" class="col-lg-8 input-lg" #newGenre>
-    <button (click)="addAlbum(newName, newArtist, newPrice, newGenre)" class="btn-success btn-lg add-button">Add</button>
+    <button (click)="addAlbum(newName)" class="btn-success btn-lg add-button">Add</button>
   </div>
   `
 })
@@ -24,4 +21,5 @@ export class NewAlbumComponent {
     this.onSubmitNewAlbum.emit(userName.value);
     userName.value = "";
   }
+
 }
