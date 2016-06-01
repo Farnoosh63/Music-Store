@@ -1,0 +1,5 @@
+<album-display *ngFor="#currentAlbum of albumList"
+  (click)="albumClicked(currentAlbum)"
+  [class.selected]="currentAlbum === selectedAlbum"
+  [album]="currentAlbum">
+</album-display>
